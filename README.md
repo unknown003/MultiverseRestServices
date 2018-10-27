@@ -36,7 +36,7 @@ Method: GET
 .../persons/all
 -------------------------------------------------------------------
 Example:
-http://localhost:8080/multiverse/persons/all  
+http://localhost:8080/multiverse/persons/ 
 Response
 
 [  
@@ -91,7 +91,7 @@ Response
 
 
 URL for balancing power
-method :  GET
+method :  POST
 -------------------------------------------------------------------
 ......../families/power/balance
 -------------------------------------------------------------------
@@ -137,7 +137,7 @@ Method:  GET
 .../families/all
 -------------------------------------------------------------------
 Example
-http://localhost:8080/multiverse//families/all    
+http://localhost:8080/multiverse//families/   
 
 Response    
 
