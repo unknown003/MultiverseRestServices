@@ -14,7 +14,9 @@ Developed Rest Services using java, spring framework, jdbc ,mysql
 
 url for creating a person is  
 method:  POST  
+-------------------------------------------------------------------
 ......./person   
+-------------------------------------------------------------------
 Example:
 http://localhost:8080/multiverse/person  
 Request:  
