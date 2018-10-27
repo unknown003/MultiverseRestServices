@@ -45,7 +45,7 @@ public class MultiverseController {
 
 	}
 
-	@RequestMapping(value = "/families/power/balance", method = RequestMethod.GET)
+	@RequestMapping(value = "/families/power/balance", method = RequestMethod.POST)
 	public ResponseEntity<List<FamilyDetails>> powerbalance() {
 
 		familyService.familiesPowerBalance();
@@ -53,7 +53,7 @@ public class MultiverseController {
 		return new ResponseEntity(familyService.getAllFamilies(), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/families/all", method = RequestMethod.GET)
+	@RequestMapping(value = "/families", method = RequestMethod.GET)
 	public ResponseEntity<List<FamilyDetails>> getAllFamilies() {
 
 		return new ResponseEntity(familyService.getAllFamilies(), HttpStatus.OK);
@@ -65,7 +65,7 @@ public class MultiverseController {
 		return new ResponseEntity("created user", HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/persons/all", method = RequestMethod.GET)
+	@RequestMapping(value = "/persons", method = RequestMethod.GET)
 	public ResponseEntity<String> getallpersons() {
 
 		return new ResponseEntity(personService.getAllpersons(), HttpStatus.OK);
