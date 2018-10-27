@@ -116,7 +116,7 @@ Response
     }    
 ]    
 
-url for getting family ids in a  particular universe is    
+url for getting family ids in a  particular universe    
 Method: GET  
 -------------------------------------------------------------------
 ...../universe/{universe_id}/families
@@ -128,9 +128,9 @@ Response:
     1,  
     2,  
     5  
-]
+]  
 
-URL  for getting all families is
+URL  for getting all families   
 Method:  GET
 -------------------------------------------------------------------
 .../families/all
