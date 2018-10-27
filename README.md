@@ -111,8 +111,8 @@ Response
             "familyId": 5,  
             "balanced": true  
         }  
-    ]  
-}  
+    ]    
+}    
 
 
 URL for balancing power  
@@ -198,6 +198,6 @@ Response
             "universeId": 3,  
             "familypower": 21  
         }  
-    ],
-    "noofFamilies": 3
-}
+    ],  
+    "noofFamilies": 3  
+}    
