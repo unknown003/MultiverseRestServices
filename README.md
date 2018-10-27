@@ -143,12 +143,14 @@ Response
     "noofFamilies": 2
 }
 
-url for getting family ids in a  particular universe    
+url for getting family ids in a  particular universe      
+
+
 Method: GET  
 -------------------------------------------------------------------
 ...../universe/{universe_id}/families
 -------------------------------------------------------------------
-  
+
 Example:  
 http://localhost:8080/multiverse/universe/1/families     
 
@@ -163,7 +165,10 @@ Response:
     ],  
     "count": 3   
 }  
+
+
 URL  for getting all families   
+
 Method:  GET
 -------------------------------------------------------------------
 .../families
