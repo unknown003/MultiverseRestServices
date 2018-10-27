@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.multiverse.dao.Dao;
-import com.multiverse.dao.PersonsResponse;
+import com.multiverse.model.PersonsResponse;
 import com.multiverse.model.CreatePersonResponse;
 import com.multiverse.model.FamiliesInUniverseResponse;
 import com.multiverse.model.Family;
