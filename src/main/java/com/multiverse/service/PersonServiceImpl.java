@@ -10,7 +10,6 @@ import com.multiverse.model.Person;
 import com.multiverse.dao.PersonDao;
 
 @Service("PersonService")
-@Transactional
 public class PersonServiceImpl implements PersonService {
 
 	@Autowired
