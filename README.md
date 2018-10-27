@@ -148,8 +148,10 @@ Method: GET
 -------------------------------------------------------------------
 ...../universe/{universe_id}/families
 -------------------------------------------------------------------
+  
 Example:  
 http://localhost:8080/multiverse/universe/1/families     
+
 Response:  
 {  
     "responseCode": 200,  
@@ -166,6 +168,7 @@ Method:  GET
 -------------------------------------------------------------------
 .../families
 -------------------------------------------------------------------
+
 Example
 http://localhost:8080/multiverse/families/   
 
