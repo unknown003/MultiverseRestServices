@@ -93,28 +93,28 @@ URL for balancing power
 ......../families/power/balance
 -------------------------------------------------------------------
 Example:
-http://localhost:8080/multiverse/families/power/balance  
+http://localhost:8080/multiverse/families/power/balance   
 
-Response
-[ 
-    { 
-        "familyId": 1, 
-        "universeId": 1, 
-        "familypower": 21
-    }, 
-    { 
-        "familyId": 1, 
-        "universeId": 2,  
+Response  
+[  
+     {   
+        "familyId": 1,   
+        "universeId": 1,   
         "familypower": 21  
+    },   
+    {   
+        "familyId": 1,   
+        "universeId": 2,    
+        "familypower": 21    
     },  
-    {  
-        "familyId": 1,  
-        "universeId": 3,  
-        "familypower": 21  
-    }  
-]  
+    {    
+        "familyId": 1,    
+        "universeId": 3,    
+        "familypower": 21    
+    }    
+]    
 
-url for getting family ids in a  particular universe is  
+url for getting family ids in a  particular universe is    
 Method: GET  
 -------------------------------------------------------------------
 ...../universe/{universe_id}/families
