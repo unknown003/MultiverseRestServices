@@ -16,14 +16,14 @@ url for creating a person is
 method:  POST  
 ......./person   
 Example:
-http://localhost:8080/multiverse/person
+http://localhost:8080/multiverse/person  
 Request:  
 {  
 	"name":"lavannnmmm",  
 	"familyId":5,   
 	"universeId":1,  
 	"power":5   
-}  
+}    
 Response:  
 created user  
 
@@ -34,7 +34,7 @@ Method: GET
 .../persons/all
 -------------------------------------------------------------------
 Example:
-http://localhost:8080/multiverse/persons/all
+http://localhost:8080/multiverse/persons/all  
 Response
 
 [  
@@ -65,7 +65,7 @@ method :  GET
 ....../families/power/check/  
 -------------------------------------------------------------------
 Example
-http://localhost:8080/multiverse/families/power/check/
+http://localhost:8080/multiverse/families/power/check/  
 
 Response  
 [  
@@ -93,7 +93,7 @@ URL for balancing power
 ......../families/power/balance
 -------------------------------------------------------------------
 Example:
-http://localhost:8080/multiverse/families/power/balance
+http://localhost:8080/multiverse/families/power/balance  
 
 Response
 [ 
@@ -120,7 +120,7 @@ Method: GET
 ...../universe/{universe_id}/families
 -------------------------------------------------------------------
 Example:  
-http://localhost:8080/multiverse/universe/1/families  
+http://localhost:8080/multiverse/universe/1/families     
 Response:  
 [   
     1,  
@@ -134,9 +134,9 @@ Method:  GET
 .../families/all
 -------------------------------------------------------------------
 Example
-http://localhost:8080/multiverse//families/all
+http://localhost:8080/multiverse//families/all    
 
-Response  
+Response    
 
 [  
     {  
