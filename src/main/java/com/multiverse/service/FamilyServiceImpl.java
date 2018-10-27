@@ -11,7 +11,6 @@ import com.multiverse.model.Family;
 import com.multiverse.model.FamilyDetails;
 
 @Service("FamilyService")
-@Transactional
 public class FamilyServiceImpl implements FamilyService {
 
 	@Autowired
