@@ -137,7 +137,7 @@ Method:  GET
 .../families/all
 -------------------------------------------------------------------
 Example
-http://localhost:8080/multiverse//families/   
+http://localhost:8080/multiverse/families/   
 
 Response    
 
