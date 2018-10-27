@@ -50,7 +50,7 @@ Response
         "universeId": 2,  
         "power": 11  
     },
-    {
+    {   
         "name": "lavannnmmm",  
         "familyId": 1,  
         "universeId": 2,  
