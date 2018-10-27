@@ -40,7 +40,7 @@ Method: GET
 .../persons
 -------------------------------------------------------------------
 Example:
-http://localhost:8080/multiverse/persons/ 
+http://localhost:8080/multiverse/persons/   
 Response
 
 {  
@@ -78,8 +78,8 @@ Response
             "universeId": 3,  
             "power": 10  
         }  
-    ]  
-}  
+    ]    
+}    
 
 
 url for checking power of families of same id in all universes    
@@ -140,8 +140,8 @@ Response
         }  
 	...  
     ],  
-    "noofFamilies": 2
-}
+    "noofFamilies": 2  
+}  
 
 url for getting family ids in a  particular universe      
 
