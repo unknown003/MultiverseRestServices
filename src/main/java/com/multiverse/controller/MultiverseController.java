@@ -16,8 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.multiverse.dao.Dao;
+import com.multiverse.model.CreatePersonResponse;
+import com.multiverse.model.FamiliesInUniverseResponse;
 import com.multiverse.model.Family;
 import com.multiverse.model.FamilyDetails;
+import com.multiverse.model.FamilyDetailsResponse;
+import com.multiverse.model.FamilyResponse;
 import com.multiverse.model.Person;
 import com.multiverse.service.FamilyService;
 import com.multiverse.service.PersonService;
@@ -32,43 +36,67 @@ public class MultiverseController {
 	FamilyService familyService;
 
 	@RequestMapping(value = "/universe/{id}/families", method = RequestMethod.GET)
-	public ResponseEntity<List<Integer>> listAllFamilies(@PathVariable int id) {
+	public ResponseEntity<FamiliesInUniverseResponse> listAllFamilies(@PathVariable int id) {
 
-		return new ResponseEntity(familyService.getAllFamiliesbyID(id), HttpStatus.OK);
+		FamiliesInUniverseResponse familiesInUniverseResponse = new FamiliesInUniverseResponse();
+
+		familiesInUniverseResponse.setFamilyIds(familyService.getAllFamiliesbyID(id));
+		familiesInUniverseResponse.setResponseCode(200);
+		return new ResponseEntity(familiesInUniverseResponse, HttpStatus.OK);
 
 	}
 
 	@RequestMapping(value = "/families/power/check", method = RequestMethod.GET)
-	public ResponseEntity<List<Family>> powercheck() {
+	public ResponseEntity<FamilyResponse> powercheck() {
 
-		return new ResponseEntity(familyService.familiesPowerCheck(), HttpStatus.OK);
+		FamilyResponse familyResponse = new FamilyResponse();
+		familyResponse.setFamilies(familyService.familiesPowerCheck());
+		familyResponse.setResponseCode(200);
+		return new ResponseEntity(familyResponse, HttpStatus.OK);
 
 	}
 
 	@RequestMapping(value = "/families/power/balance", method = RequestMethod.POST)
-	public ResponseEntity<List<FamilyDetails>> powerbalance() {
+	public ResponseEntity<FamilyDetailsResponse> powerbalance() {
 
 		familyService.familiesPowerBalance();
-
-		return new ResponseEntity(familyService.getAllFamilies(), HttpStatus.OK);
+		List<FamilyDetails> familyDetails = familyService.getAllFamilies();
+		FamilyDetailsResponse familyDetailsResponse = new FamilyDetailsResponse();
+		familyDetailsResponse.setFamilyDetails(familyDetails);
+		familyDetailsResponse.setNoofFamilies(familyDetails.size());
+		familyDetailsResponse.setResponseCode(familyDetails.size() > 0 ? 200 : 500);
+		return new ResponseEntity(familyDetailsResponse, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/families", method = RequestMethod.GET)
 	public ResponseEntity<List<FamilyDetails>> getAllFamilies() {
 
-		return new ResponseEntity(familyService.getAllFamilies(), HttpStatus.OK);
+		List<FamilyDetails> familyDetails = familyService.getAllFamilies();
+		FamilyDetailsResponse familyDetailsResponse = new FamilyDetailsResponse();
+		familyDetailsResponse.setFamilyDetails(familyDetails);
+		familyDetailsResponse.setNoofFamilies(familyDetails.size());
+		familyDetailsResponse.setResponseCode(familyDetails.size() > 0 ? 200 : 500);
+		return new ResponseEntity(familyDetailsResponse, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/person", method = RequestMethod.POST)
-	public ResponseEntity<String> createperson(@RequestBody Person person) {
+	public ResponseEntity<CreatePersonResponse> createperson(@RequestBody Person person) {
+		CreatePersonResponse createPersonResponse = new CreatePersonResponse();
 		personService.savePerson(person);
-		return new ResponseEntity("created user", HttpStatus.OK);
+		createPersonResponse.setCreationStatus(true);
+		createPersonResponse.setResponseCode(200);
+		return new ResponseEntity(createPersonResponse, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/persons", method = RequestMethod.GET)
-	public ResponseEntity<String> getallpersons() {
+	public ResponseEntity<PersonsResponse> getallpersons() {
 
-		return new ResponseEntity(personService.getAllpersons(), HttpStatus.OK);
+		PersonsResponse personsResponse = new PersonsResponse();
+		List<Person> persons = personService.getAllpersons();
+		personsResponse.setPersons(persons);
+		personsResponse.setCount(persons.size());
+		personsResponse.setResponseCode(200);
+		return new ResponseEntity(personsResponse, HttpStatus.OK);
 	}
 
 }
