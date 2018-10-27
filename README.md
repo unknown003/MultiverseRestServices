@@ -12,7 +12,7 @@ Developed Rest Services using java, spring framework, jdbc ,mysql
 ** Provided Rest Services are: **
 -------------------------------------------------------------------
 
-url for creating a person is  
+url for creating a person   
 method:  POST  
 -------------------------------------------------------------------
 ......./person   
