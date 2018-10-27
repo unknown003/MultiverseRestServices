@@ -30,10 +30,10 @@ Response:
 created user  
 
 
-url for getting all persons
+url for getting all persons  
 Method: GET
 -------------------------------------------------------------------
-.../persons/all
+.../persons
 -------------------------------------------------------------------
 Example:
 http://localhost:8080/multiverse/persons/ 
@@ -90,7 +90,7 @@ Response
 ]  
 
 
-URL for balancing power
+URL for balancing power  
 method :  POST
 -------------------------------------------------------------------
 ......../families/power/balance
@@ -134,7 +134,7 @@ Response:
 URL  for getting all families   
 Method:  GET
 -------------------------------------------------------------------
-.../families/all
+.../families
 -------------------------------------------------------------------
 Example
 http://localhost:8080/multiverse/families/   
