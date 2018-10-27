@@ -56,7 +56,7 @@ Response
         "universeId": 2,  
         "power": 10  
     }  
-]  
+]    
 
 
 url for checking power of families of same id in all universes    
@@ -84,8 +84,8 @@ Response
     {  
         "familyId": 5,  
         "balanced": true  
-    }
-]
+    }  
+]  
 
 
 URL for balancing power
